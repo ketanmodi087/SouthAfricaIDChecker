@@ -1,0 +1,27 @@
+body{margin:0px;padding:0px;height:100%;font-family:"Poppins",sans-serif;}
+.id-page{overflow-x:hidden;}
+.id-page .hero-wrap{position:relative;overflow:hidden;}
+.id-page .hero-wrap .hero-mask{position:absolute;top:0;left:0;height:100%;width:100%;z-index:1;opacity:0.8;background-color:#0d6efd;}
+.id-page .hero-wrap .hero-bg{position:absolute;top:0;left:0;height:100%;width:100%;z-index:0;background-attachment:scroll;background-position:center center;background-repeat:no-repeat;background-size:cover;transition:background-image 300ms ease-in 200ms;background-image:url("../images/login-bg.jpg");}
+.id-page .hero-wrap .hero-content{position:relative;z-index:2;}
+.id-page .theme-form input{display:block;width:100%;padding:17px 15px;font-size:18px;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+.id-page .text-11{font-size:2.75rem!important;}
+.id-page .text-4{font-size:1.125rem!important;}
+.id-page .fw-600{font-weight:600!important;}
+.result-page{display:flex;align-items:center;justify-content:center;min-height:100vh;background:linear-gradient(to right,#ADD8E6,#B0E0E6);}
+.result-page .result-box{max-width:1024px;min-width:1024px;}
+.result-box .card-header{background-color:#C0C0C0;padding:20px 15px;}
+.result-box .card-header .card-title{font-weight:bold;}
+.result-box .card-footer .btn{padding:10px 15px;font-size:18px;font-weight:bold;}
+.holiday-list{background-color:rgba(23,162,184,0.15);}
+.holiday-list .holiday-title{font-size:24px;font-weight:bold;}
+.holiday-scroll{height:100%;max-height:250px;overflow-y:scroll;}
+.holiday-scroll::-webkit-scrollbar{background-color:transparent;width:10px;}
+.holiday-scroll::-webkit-scrollbar-track{background-color:transparent;}
+.holiday-scroll::-webkit-scrollbar-thumb{background-color:#fff;border-radius:10px;}
+.holiday-scroll::-webkit-scrollbar-button{display:none;}
+.single-holiday{box-shadow:rgba(100,100,111,0.2) 0px 7px 29px 0px;border:1px solid #17a2b8;}
+.single-holiday .card-header{background-color:rgba(23,162,184,0.60);}
+.single-holiday .card-header .card-title{font-size:20px;font-weight:bold;color:#000;}
+.single-holiday .card-body p strong{color:#000;}
+.single-holiday .card-body p{font-size:18px;color:#666;}

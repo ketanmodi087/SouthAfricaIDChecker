@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA ID Result</title>
+    {% load static %}
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+    <div class="result-page">
+        <div class="card result-box shadow-lg">
+            <div class="card-header bg-info text-white">
+                <h4 class="card-title mb-0">SA ID Result</h4>
+            </div>
+            <div class="card-body pb-0">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <td><strong>ID Number:</strong></td>
+                            <td>{{ record.id_number }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Birth Date:</strong></td>
+                            <td>{{ record.date_of_birth }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gender:</strong></td>
+                            <td>{{ record.gender }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Citizenship Status:</strong></td>
+                            <td>{{ record.citizenship_status }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-body holiday-list pb-2">
+                <h4 class="holiday-title mt-3 mb-4">Public Holidays</h4>
+                <div class="holiday-scroll">
+                    {% if holidays %}
+                    {% for holiday in holidays %}
+                    <div class="card mb-4 single-holiday shadow-sm">
+                        <div class="card-header text-white">
+                            <div class="card-title mb-0">{{ holiday.holiday_name }}</div>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-0"><strong>({{ holiday.date }})</strong> - {{ holiday.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="card mb-4 single-holiday shadow-sm">
+                        <div class="card-body">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                No public holidays found for this ID.
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card-footer text-right">
+                <a href="{% url 'validate-sa-id' %}" class="btn btn-primary">Try another ID</a>
+            </div>
+        </div>
+    </div>
+
+    {% bootstrap_javascript jquery='full' %}
+</body>
+
+</html>
